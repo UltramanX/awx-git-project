@@ -15,6 +15,7 @@
         name: nginx
         state: present
       when: ansible_os_family == "RedHat"
+      become: true
 
     - name: Start and enable Nginx service for Debian-based systems
       ansible.builtin.service:
